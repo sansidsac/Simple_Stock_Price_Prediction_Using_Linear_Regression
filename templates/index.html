@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+    <style>
+        body {
+            background-color: #b22222; /* Professional shade of red */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        label, select, button {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Price Prediction</h1>
+    <form action="/" method="POST">
+        <label for="stock_symbol">Select a Company:</label>
+        <select id="stock_symbol" name="stock_symbol">
+            <option value="AAPL">Apple (AAPL)</option>
+            <option value="GOOGL">Alphabet (GOOGL)</option>
+            <option value="MSFT">Microsoft (MSFT)</option>
+            <option value="AMZN">Amazon (AMZN)</option>
+            <option value="TSLA">Tesla (TSLA)</option>
+            <option value="NFLX">Netflix (NFLX)</option>
+            <option value="META">Meta (META)</option>
+            <option value="NVDA">NVIDIA (NVDA)</option>
+            <option value="DIS">Disney (DIS)</option>
+            <option value="BA">Boeing (BA)</option>
+        </select>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

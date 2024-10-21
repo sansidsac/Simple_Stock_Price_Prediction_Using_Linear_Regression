@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction Results</title>
+    <style>
+        body {
+            background-color: #b22222; /* Professional shade of red */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin-bottom: 40px; /* Increased spacing */
+        }
+        .content {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        p {
+            font-size: 1em;
+            margin: 20px 0; /* Increased spacing */
+            text-align: justify; /* Justify alignment */
+        }
+        a {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Price Prediction for {{ stock_symbol.upper() }}</h1>
+    <div class="content">
+        <img src="{{ url_for('static', filename='plot.png') }}" alt="Stock Prediction Plot">
+        <br>
+        <p>Mean Price: {{ mean_price }}</p>
+        <p>Max Price: {{ max_price }}</p>
+        <p>Min Price: {{ min_price }}</p>
+        <p>Latest Price: {{ last_price }}</p>
+        <p>Price Change: {{ price_change }}</p>
+        <p>Percentage Change: {{ change_percentage }}%</p>
+        <p>Summary: {{ summary }}</p>
+        <a href="/">Go back</a>
+    </div>
+</body>
+</html>
